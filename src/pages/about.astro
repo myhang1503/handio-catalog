@@ -2,20 +2,26 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { SITE } from '../config';
 ---
-<BaseLayout title="About" description="Câu chuyện của HANDIO — macrame làm bằng tay.">
+<BaseLayout title="About" description="HANDIO — macrame làm bằng tay, những món đồ thủ công và bộ kit tự làm.">
   <article class="container about">
     <p class="eyebrow">About</p>
-    <h1>{SITE.slogan}</h1>
+    <h1>{SITE.slogan}.</h1>
     <div class="prose">
       <p>
-        HANDIO là thương hiệu macrame thủ công của Việt Nam, với những món đồ đan tay và bộ kit
-        tự làm dành cho người mới bắt đầu.
+        HANDIO bắt đầu từ tình yêu dành cho những món đồ thủ công và mong muốn tạo ra những điều
+        mang dấu ấn riêng.
       </p>
       <p>
-        Mỗi món đồ được thắt từng nút một, chậm rãi và tỉ mỉ. Chúng mình tin rằng một món đồ
-        handmade không chỉ để dùng, mà còn để giữ lại một khoảnh khắc: {SITE.tagline.toLowerCase()}.
+        Từ những ngày đầu tự tay làm macrame, HANDIO dần trở thành một hành trình để khám phá,
+        sáng tạo và chia sẻ niềm vui làm ra một món đồ của riêng mình.
       </p>
-      <p><em>Đang cập nhật: hãy viết câu chuyện riêng của bạn ở đây.</em></p>
+      <p>
+        Thông qua những sản phẩm thủ công và bộ kit tự làm, HANDIO mong muốn đưa macrame đến gần
+        hơn với mọi người — không chỉ như một món đồ để sử dụng, mà còn là một trải nghiệm sáng
+        tạo, nơi mỗi người có thể tìm thấy niềm vui trong quá trình tạo nên điều gì đó bằng chính
+        đôi tay mình.
+      </p>
+      <p><strong>{SITE.tagline}.</strong></p>
     </div>
   </article>
 </BaseLayout>
