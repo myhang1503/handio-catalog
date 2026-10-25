@@ -15,7 +15,5 @@ images:
 specs:
   - { label: 'Màu sắc', value: 'Xanh dương, cam' }
   - { label: 'Kiểu dáng', value: 'Túi đeo chéo, dây đeo tết' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi đeo chéo macrame xanh dương và cam, đan hoàn toàn bằng tay.

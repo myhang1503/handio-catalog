@@ -10,7 +10,5 @@ images:
 specs:
   - { label: 'Màu sắc', value: 'Nâu, be' }
   - { label: 'Kiểu dáng', value: 'Túi tote, quai xách' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi tote macrame nâu họa tiết hoa, đan hoàn toàn bằng tay.

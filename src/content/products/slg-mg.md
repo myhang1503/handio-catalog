@@ -21,7 +21,5 @@ specs:
   - { label: 'Màu sắc', value: 'Xanh mint, hoa vàng' }
   - { label: 'Kiểu dáng', value: 'Túi xách tay kiêm đeo chéo' }
   - { label: 'Phụ kiện', value: 'Khóa móc vàng, nơ trang trí, charm hoa' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Mini Green là chiếc túi nhỏ đan bằng tay, màu xanh mint dịu mắt, điểm thêm những bông hoa vàng bé xíu trên dây đeo.

@@ -17,7 +17,5 @@ specs:
   - { label: 'Màu sắc', value: 'Xanh lá, hồng' }
   - { label: 'Kiểu dáng', value: 'Túi trái tim, đeo chéo' }
   - { label: 'Phụ kiện', value: 'Khóa móc bạc, dây đeo tết có nút điều chỉnh' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Heart Bag là chiếc túi nhỏ hình trái tim đan bằng tay, có dây đeo tết dài với nút thắt để chỉnh độ dài, vừa tay các bé.

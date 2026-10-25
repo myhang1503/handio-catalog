@@ -11,7 +11,5 @@ images:
 specs:
   - { label: 'Màu sắc', value: 'San hô' }
   - { label: 'Kiểu dáng', value: 'Túi trái tim, đeo chéo' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi trái tim đan tay màu san hô, đan hoàn toàn bằng tay.

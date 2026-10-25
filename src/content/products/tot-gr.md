@@ -11,7 +11,5 @@ images:
 specs:
   - { label: 'Màu sắc', value: 'Xanh lá, trắng' }
   - { label: 'Kiểu dáng', value: 'Túi tote, hai quai' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi tote macrame xanh lá viền trắng, đan hoàn toàn bằng tay.

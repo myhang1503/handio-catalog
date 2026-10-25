@@ -17,7 +17,5 @@ images:
 specs:
   - { label: 'Màu sắc', value: 'Đỏ' }
   - { label: 'Kiểu dáng', value: 'Túi đeo chéo, tua rua' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi macrame đỏ với tua rua dài, đan hoàn toàn bằng tay.

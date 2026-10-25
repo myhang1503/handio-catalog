@@ -49,7 +49,5 @@ specs:
   - { label: 'Màu sắc', value: 'Pastel nhiều màu (có nhiều tông)' }
   - { label: 'Kiểu dáng', value: 'Túi lưới đựng điện thoại, đeo cổ hoặc đeo chéo' }
   - { label: 'Phụ kiện', value: 'Dây đeo hoa macrame, túi nhỏ kèm khóa móc bạc' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Phone Net Bag là chiếc túi lưới đan tay đựng điện thoại, tông màu pastel nhẹ nhàng, dây đeo điểm những bông hoa nhỏ, kèm một chiếc túi nhỏ xinh.

@@ -11,7 +11,5 @@ images:
 specs:
   - { label: 'Màu sắc', value: 'Xanh dương nhạt' }
   - { label: 'Kiểu dáng', value: 'Túi đeo chéo' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi đeo chéo macrame xanh dương nhạt, đan hoàn toàn bằng tay.

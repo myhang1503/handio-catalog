@@ -13,7 +13,5 @@ images:
 specs:
   - { label: 'Màu sắc', value: 'Xanh mint, hoa vàng' }
   - { label: 'Kiểu dáng', value: 'Túi xách tay kiêm đeo chéo' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi macrame xanh mint, dây đeo hoa vàng, đan hoàn toàn bằng tay.

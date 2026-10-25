@@ -8,7 +8,5 @@ images:
 specs:
   - { label: 'Màu sắc', value: 'Trắng kem' }
   - { label: 'Kiểu dáng', value: 'Lưới ôm chai, quai xách' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi lưới macrame đựng chai nước, đan hoàn toàn bằng tay.

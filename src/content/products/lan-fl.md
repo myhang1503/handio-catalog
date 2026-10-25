@@ -17,7 +17,5 @@ specs:
   - { label: 'Màu sắc', value: 'Xanh lá, nâu, pastel nhiều màu' }
   - { label: 'Kiểu dáng', value: 'Dây đeo chéo, họa tiết hoa' }
   - { label: 'Phụ kiện', value: 'Khóa cài nhanh màu đen, dây thun' }
-  - { label: 'Chiều dài', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Flower Lanyard là sợi dây đeo điện thoại đan tay, nở những bông hoa xanh lá và pastel nhỏ xinh trên nền nâu đất.

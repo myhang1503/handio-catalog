@@ -14,7 +14,5 @@ images:
 specs:
   - { label: 'Màu sắc', value: 'Nâu' }
   - { label: 'Kiểu dáng', value: 'Túi đeo chéo' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi đeo chéo macrame nâu họa tiết lá, đan hoàn toàn bằng tay.

@@ -31,9 +31,18 @@ const photos = await Promise.all(
 );
 const W = 1200;
 const askText = `Xin chào Handio, mình muốn hỏi giá mẫu ${name} ạ.`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name,
+  description: subtitle,
+  image: photos.map((p) => p.src),
+  brand: { '@type': 'Brand', name: SITE.name },
+  url: new URL(`/products/${entry.id}/`, SITE.url).href,
+};
 const hasOthers = prev && prev.id !== entry.id;
 ---
-<BaseLayout title={name} description={subtitle} image={photos[0].src}>
+<BaseLayout title={name} description={subtitle} image={photos[0].src} jsonLd={jsonLd}>
   <div class="container product">
     <div class={`gallery${photos.length === 1 ? ' single' : ''}`}>
       {photos.map((p, i) => (

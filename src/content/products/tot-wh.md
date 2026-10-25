@@ -9,7 +9,5 @@ images:
 specs:
   - { label: 'Màu sắc', value: 'Trắng kem' }
   - { label: 'Kiểu dáng', value: 'Túi tote, quai đeo vai' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi tote macrame trắng kem, đan hoàn toàn bằng tay.

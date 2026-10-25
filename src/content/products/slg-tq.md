@@ -9,7 +9,5 @@ images:
 specs:
   - { label: 'Màu sắc', value: 'Xanh ngọc' }
   - { label: 'Kiểu dáng', value: 'Túi đeo chéo, tua rua' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi macrame xanh ngọc viền tua rua, đan hoàn toàn bằng tay.

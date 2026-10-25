@@ -8,7 +8,5 @@ images:
 specs:
   - { label: 'Màu sắc', value: 'Cam, trắng kem' }
   - { label: 'Kiểu dáng', value: 'Đồ trang trí treo tường' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Chú cú macrame treo tường, đan hoàn toàn bằng tay.

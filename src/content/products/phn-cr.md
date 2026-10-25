@@ -11,7 +11,5 @@ images:
 specs:
   - { label: 'Màu sắc', value: 'Trắng kem' }
   - { label: 'Kiểu dáng', value: 'Túi điện thoại, đeo chéo' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi đựng điện thoại macrame tua rua màu kem, đan hoàn toàn bằng tay.

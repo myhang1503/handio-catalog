@@ -8,8 +8,10 @@ interface Props {
   title?: string;
   description?: string;
   image?: string;
+  jsonLd?: object;
 }
-const { title, description = `${SITE.name} — ${SITE.tagline}`, image } = Astro.props;
+const { title, description = `${SITE.name} — ${SITE.tagline}`, image, jsonLd } = Astro.props;
+const canonical = new URL(Astro.url.pathname, SITE.url).href;
 const pageTitle = title ? `${title} · ${SITE.name}` : `${SITE.name} — Macrame Collection`;
 ---
 <!doctype html>
@@ -18,9 +20,15 @@ const pageTitle = title ? `${title} · ${SITE.name}` : `${SITE.name} — Macrame
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:url" content={canonical} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     {image && <meta property="og:image" content={image} />}
+    <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
     <meta name="theme-color" content="#012a4a" />
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" type="image/png" href="/favicon-512.png" sizes="512x512" />

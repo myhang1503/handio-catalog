@@ -12,7 +12,5 @@ specs:
   - { label: 'Màu sắc', value: 'Xanh lá' }
   - { label: 'Kiểu dáng', value: 'Túi tote, hai quai xách' }
   - { label: 'Phụ kiện', value: 'Khuyên D bạc' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Green Tote là chiếc túi tote đan tay màu xanh lá, hai quai xách dày dặn, họa tiết đan chắc và đều.

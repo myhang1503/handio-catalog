@@ -10,7 +10,5 @@ images:
 specs:
   - { label: 'Màu sắc', value: 'Hồng, xanh lá' }
   - { label: 'Kiểu dáng', value: 'Móc khóa' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Móc khóa macrame hoa hồng và lá, đan hoàn toàn bằng tay.

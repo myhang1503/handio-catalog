@@ -15,7 +15,5 @@ images:
 specs:
   - { label: 'Màu sắc', value: 'Hồng đào' }
   - { label: 'Kiểu dáng', value: 'Túi xách tay' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi xách tay nhỏ macrame màu hồng đào, đan hoàn toàn bằng tay.

@@ -11,7 +11,5 @@ images:
 specs:
   - { label: 'Màu sắc', value: 'Hồng, hoa vàng' }
   - { label: 'Kiểu dáng', value: 'Túi đựng ly, quai xách' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi đựng ly macrame hồng với hoa nhỏ, đan hoàn toàn bằng tay.

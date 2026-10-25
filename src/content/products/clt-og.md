@@ -8,7 +8,5 @@ images:
 specs:
   - { label: 'Màu sắc', value: 'Xám, cam' }
   - { label: 'Kiểu dáng', value: 'Túi cầm tay' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi cầm tay macrame xám và cam, đan hoàn toàn bằng tay.

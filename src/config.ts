@@ -1,4 +1,5 @@
 export const SITE = {
+  url: 'https://handiomacrame.com',
   name: 'HANDIO',
   slogan: 'Make it yourself, make it special',
   tagline: 'Creating memories you can hold',

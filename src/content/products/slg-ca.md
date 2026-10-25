@@ -8,7 +8,5 @@ images:
 specs:
   - { label: 'Màu sắc', value: 'Caramel, trắng kem' }
   - { label: 'Kiểu dáng', value: 'Túi đeo chéo' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi macrame caramel với họa tiết hoa trắng, đan hoàn toàn bằng tay.

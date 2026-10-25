@@ -9,7 +9,5 @@ images:
 specs:
   - { label: 'Màu sắc', value: 'Xanh dương, cam' }
   - { label: 'Kiểu dáng', value: 'Túi xách tay' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi macrame xanh dương họa tiết cam, đan hoàn toàn bằng tay.

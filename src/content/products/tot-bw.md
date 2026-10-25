@@ -11,7 +11,5 @@ images:
 specs:
   - { label: 'Màu sắc', value: 'Kem, hồng' }
   - { label: 'Kiểu dáng', value: 'Túi tote, quai đeo vai' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi tote macrame kem đính nơ hồng, đan hoàn toàn bằng tay.

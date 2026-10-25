@@ -8,7 +8,5 @@ images:
 specs:
   - { label: 'Màu sắc', value: 'Kem vàng' }
   - { label: 'Kiểu dáng', value: 'Móc khóa' }
-  - { label: 'Kích thước', value: 'Đang cập nhật' }
-  - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Móc khóa macrame hoa hồng màu kem, đan hoàn toàn bằng tay.
