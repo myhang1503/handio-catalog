@@ -12,7 +12,6 @@ const channels = [
 <BaseLayout title="Contact" description="Liên hệ HANDIO để hỏi về mẫu hoặc đặt làm riêng.">
   <section class="container contact">
     <p class="eyebrow">Contact</p>
-    <h1>Hỏi về mẫu, hoặc đặt làm riêng</h1>
     <p class="lead">Bạn thích mẫu nào? Cứ nhắn cho Handio nhé.</p>
     <ul>
       {channels.map((c) => (
@@ -28,7 +27,6 @@ const channels = [
 </BaseLayout>
 <style>
   .contact { max-width: 52rem; padding-top: 1rem; }
-  h1 { font-size: clamp(1.6rem, 4vw, 2.3rem); margin: 0.2rem 0 0.6rem; }
   .lead { color: var(--muted); margin: 0 0 2rem; }
   ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
   li { border-bottom: 1px solid var(--line); }
