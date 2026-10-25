@@ -1,0 +1,81 @@
+---
+import { Image } from 'astro:assets';
+import type { Photo } from '../lib/images';
+
+interface Props {
+  href: string;
+  name: string;
+  subtitle: string;
+  cover: Photo;
+  hover?: Photo;
+}
+const { href, name, subtitle, cover, hover } = Astro.props;
+const W = 900;
+const h = (p: Photo) => Math.round((W * p.height) / p.width);
+---
+<a class="card" href={href}>
+  <Image
+    class="cover"
+    src={cover.src}
+    width={W}
+    height={h(cover)}
+    widths={[450, 900]}
+    sizes="(min-width: 1100px) 25vw, (min-width: 700px) 33vw, 50vw"
+    alt={`${name} — ${subtitle}`}
+    loading="lazy"
+  />
+  {hover && (
+    <Image
+      class="alt"
+      src={hover.src}
+      width={W}
+      height={h(hover)}
+      widths={[450, 900]}
+      sizes="(min-width: 1100px) 25vw, (min-width: 700px) 33vw, 50vw"
+      alt=""
+      loading="lazy"
+    />
+  )}
+  <span class="label">
+    <span class="name">{name}</span>
+  </span>
+</a>
+<style>
+  .card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background: #efece5;
+  }
+  .card :global(img) { width: 100%; height: auto; }
+  .alt {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .label {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 2.5rem 1rem 0.9rem;
+    background: linear-gradient(to top, rgba(1, 42, 74, 0.55), transparent);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .name {
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+  @media (hover: hover) {
+    .card:hover .alt, .card:hover .label { opacity: 1; }
+  }
+  /* touch screens have no hover: keep the name always visible */
+  @media (hover: none) {
+    .label { opacity: 1; }
+  }
+  .card:focus-visible .label { opacity: 1; }
+</style>

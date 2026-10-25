@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+import { SITE, LOGO } from '../config';
+---
+<footer>
+  <Image src={LOGO} alt="HANDIO" width={320} height={256} class="logo" />
+  <p class="tagline">{SITE.tagline}</p>
+  <nav aria-label="Mạng xã hội">
+    <a href={SITE.instagram} rel="noopener" data-newtab>Instagram</a>
+    <a href={SITE.facebook} rel="noopener" data-newtab>Facebook</a>
+    <a href={`mailto:${SITE.email}`}>Email</a>
+  </nav>
+  <p class="copy">© {new Date().getFullYear()} HANDIO</p>
+</footer>
+<style>
+  footer {
+    margin-top: 6rem;
+    padding: 3rem var(--gutter) 2rem;
+    background: var(--navy);
+    color: #dfe7ee;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .logo { width: 160px; height: auto; }
+  .tagline { margin: 0; letter-spacing: 0.25em; text-transform: uppercase; font-size: 0.75rem; }
+  nav { display: flex; gap: 1.6rem; margin-top: 0.6rem; }
+  nav a { color: #fff; font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; }
+  nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .copy { margin: 1rem 0 0; font-size: 0.7rem; opacity: 0.6; }
+</style>

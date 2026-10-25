@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../config';
+---
+<BaseLayout title="About" description="Câu chuyện của HANDIO — macrame làm bằng tay.">
+  <article class="container about">
+    <p class="eyebrow">About</p>
+    <h1>{SITE.slogan}</h1>
+    <div class="prose">
+      <p>
+        HANDIO là thương hiệu macrame thủ công của Việt Nam, với những món đồ đan tay và bộ kit
+        tự làm dành cho người mới bắt đầu.
+      </p>
+      <p>
+        Mỗi món đồ được thắt từng nút một, chậm rãi và tỉ mỉ. Chúng mình tin rằng một món đồ
+        handmade không chỉ để dùng, mà còn để giữ lại một khoảnh khắc: {SITE.tagline.toLowerCase()}.
+      </p>
+      <p><em>Đang cập nhật: hãy viết câu chuyện riêng của bạn ở đây.</em></p>
+    </div>
+  </article>
+</BaseLayout>
+<style>
+  .about { max-width: 52rem; padding-top: 1rem; }
+  h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 0.2rem 0 1.6rem; }
+</style>

@@ -1,0 +1,138 @@
+---
+import { getCollection, render } from 'astro:content';
+import { Image, getImage } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { productPhoto } from '../../lib/images';
+import { SITE } from '../../config';
+
+export async function getStaticPaths() {
+  const entries = (await getCollection('products')).sort((a, b) => a.data.order - b.data.order);
+  return entries.map((entry, i) => ({
+    params: { slug: entry.id },
+    props: {
+      entry,
+      prev: entries[i - 1] ?? entries[entries.length - 1],
+      next: entries[i + 1] ?? entries[0],
+    },
+  }));
+}
+
+const { entry, prev, next } = Astro.props;
+const { name, subtitle, cover, images, specs } = entry.data;
+const { Content } = await render(entry);
+
+const files = [{ file: cover, alt: `${name} — ${subtitle}` }, ...images];
+const photos = await Promise.all(
+  files.map(async (f) => {
+    const photo = await productPhoto(f.file);
+    const big = await getImage({ src: photo.src, width: 1800, height: Math.round((1800 * photo.height) / photo.width) });
+    return { ...photo, alt: f.alt, full: big.src };
+  }),
+);
+const W = 1200;
+const askText = `Xin chào Handio, mình muốn hỏi giá mẫu ${name} ạ.`;
+const hasOthers = prev && prev.id !== entry.id;
+---
+<BaseLayout title={name} description={subtitle} image={photos[0].src}>
+  <div class="container product">
+    <div class="gallery">
+      {photos.map((p, i) => (
+        <button type="button" class="shot" data-full={p.full} data-alt={p.alt} aria-label={`Phóng to: ${p.alt}`}>
+          <Image
+            src={p.src}
+            width={W}
+            height={Math.round((W * p.height) / p.width)}
+            widths={[600, 1200]}
+            sizes="(min-width: 900px) 55vw, 100vw"
+            alt={p.alt}
+            loading={i === 0 ? 'eager' : 'lazy'}
+          />
+        </button>
+      ))}
+    </div>
+
+    <aside class="info">
+      <p class="eyebrow">Collection</p>
+      <h1>{name}</h1>
+      <p class="subtitle">{subtitle}</p>
+
+      <div class="prose"><Content /></div>
+
+      {specs.length > 0 && (
+        <>
+          <h2 class="specs-title">Thông số</h2>
+          <dl class="specs">
+            {specs.map((s) => (
+              <>
+                <dt>{s.label}</dt>
+                <dd>{s.value}</dd>
+              </>
+            ))}
+          </dl>
+        </>
+      )}
+
+      <div class="cta">
+        <a class="button" id="ask" href={`${SITE.messenger}?text=${encodeURIComponent(askText)}`} data-base={SITE.messenger} data-text={askText} data-newtab rel="noopener">Hỏi về mẫu này</a>
+        <p class="note">Nhắn Messenger hoặc Instagram <a href={SITE.instagram} rel="noopener">@handiomacrame</a> để được tư vấn.</p>
+      </div>
+
+      {hasOthers && (
+        <nav class="pager" aria-label="Sản phẩm khác">
+          <a href={`/products/${prev.id}/`}>← {prev.data.name}</a>
+          <a href={`/products/${next.id}/`}>{next.data.name} →</a>
+        </nav>
+      )}
+    </aside>
+  </div>
+
+  <dialog id="lightbox" aria-label="Xem ảnh lớn">
+    <button type="button" class="close" aria-label="Đóng">×</button>
+    <img alt="" />
+  </dialog>
+</BaseLayout>
+
+<script>
+  const ask = document.querySelector<HTMLAnchorElement>('#ask');
+  if (ask) {
+    const text = `${ask.dataset.text}
+${location.origin}${location.pathname}`;
+    ask.href = `${ask.dataset.base}?text=${encodeURIComponent(text)}`;
+  }
+  const dialog = document.querySelector<HTMLDialogElement>('#lightbox')!;
+  const big = dialog.querySelector('img')!;
+  document.querySelectorAll<HTMLButtonElement>('.shot').forEach((b) => {
+    b.addEventListener('click', () => {
+      big.src = b.dataset.full ?? '';
+      big.alt = b.dataset.alt ?? '';
+      dialog.showModal();
+    });
+  });
+  dialog.addEventListener('click', () => dialog.close());
+</script>
+
+<style>
+  .product { display: grid; gap: 2.5rem; padding-top: 1rem; }
+  @media (min-width: 900px) {
+    .product { grid-template-columns: 1.25fr 1fr; gap: 4rem; align-items: start; }
+    .info { position: sticky; top: 2rem; }
+  }
+  .gallery { display: grid; gap: clamp(10px, 2vw, 24px); }
+  .shot { padding: 0; border: 0; background: #efece5; cursor: zoom-in; display: block; }
+  .shot :global(img) { width: 100%; height: auto; }
+  h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: 0.08em; margin: 0.2rem 0 0.4rem; }
+  .subtitle { color: var(--muted); margin: 0 0 1.5rem; }
+  .specs-title { font-size: 1.1rem; letter-spacing: 0.2em; text-transform: uppercase; margin: 2rem 0 0.6rem; }
+  .specs { display: grid; grid-template-columns: max-content 1fr; gap: 0.5rem 1.6rem; margin: 0; }
+  .specs dt { color: var(--muted); }
+  .specs dd { margin: 0; }
+  .cta { margin-top: 2.2rem; }
+  .note { font-size: 0.9rem; color: var(--muted); }
+  .note a { text-decoration: underline; text-underline-offset: 3px; }
+  .pager { display: flex; justify-content: space-between; margin-top: 2.5rem; padding-top: 1.2rem; border-top: 1px solid var(--line); font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; }
+
+  dialog { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; }
+  dialog::backdrop { background: rgba(1, 42, 74, 0.92); }
+  dialog img { max-width: 96vw; max-height: 94vh; width: auto; height: auto; margin: auto; cursor: zoom-out; }
+  .close { position: fixed; top: 0.6rem; right: 1rem; z-index: 1; font-size: 2.4rem; line-height: 1; color: #fff; background: none; border: 0; cursor: pointer; }
+</style>

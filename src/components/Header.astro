@@ -1,0 +1,49 @@
+---
+const { pathname } = Astro.url;
+const links = [
+  { href: '/', label: 'Collection', active: pathname === '/' || pathname.startsWith('/products') },
+  { href: '/about/', label: 'About', active: pathname.startsWith('/about') },
+  { href: '/contact/', label: 'Contact', active: pathname.startsWith('/contact') },
+];
+---
+<header>
+  <a class="brand" href="/" aria-label="HANDIO — trang chủ">HANDIO</a>
+  <nav aria-label="Chính">
+    {links.map((l) => (
+      <a href={l.href} aria-current={l.active ? 'page' : undefined}>{l.label}</a>
+    ))}
+  </nav>
+</header>
+<style>
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.1rem;
+    padding: 2.2rem var(--gutter) 1.8rem;
+  }
+  .brand {
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 0.5em;
+    padding-left: 0.5em; /* optically re-centers the trailing letter-spacing */
+  }
+  nav {
+    display: flex;
+    gap: clamp(1.4rem, 5vw, 3rem);
+  }
+  nav a {
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid transparent;
+    transition: color 0.25s, border-color 0.25s;
+  }
+  nav a:hover,
+  nav a[aria-current='page'] {
+    color: var(--navy);
+    border-bottom-color: var(--navy);
+  }
+</style>

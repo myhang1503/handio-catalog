@@ -1,16 +1,46 @@
 ---
----
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { productPhoto } from '../lib/images';
+import { SITE } from '../config';
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro hello</h1>
-	</body>
-</html>
+const entries = (await getCollection('products')).sort((a, b) => a.data.order - b.data.order);
+const products = await Promise.all(
+  entries.map(async (e) => ({
+    slug: e.id,
+    ...e.data,
+    coverPhoto: await productPhoto(e.data.cover),
+    hoverPhoto: e.data.images[0] ? await productPhoto(e.data.images[0].file) : undefined,
+  })),
+);
+---
+<BaseLayout title="Collection" image={products[0]?.coverPhoto.src}>
+  <section class="intro container">
+    <p class="eyebrow">{SITE.slogan}</p>
+    <p class="lead">Quiet in expression. Simple in structure. Visual in storytelling.</p>
+  </section>
+  <section class="container" aria-label="Collection">
+    <div class="grid">
+      {products.map((p) => (
+        <div class="item">
+          <ProductCard
+            href={`/products/${p.slug}/`}
+            name={p.name}
+            subtitle={p.subtitle}
+            cover={p.coverPhoto}
+            hover={p.hoverPhoto}
+          />
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+<style>
+  .intro { text-align: center; padding-block: 1rem 2.5rem; }
+  .lead { margin: 0.4rem 0 0; color: var(--muted); }
+  .grid { columns: 2; column-gap: clamp(10px, 2vw, 24px); }
+  .item { break-inside: avoid; margin-bottom: clamp(10px, 2vw, 24px); }
+  @media (min-width: 700px) { .grid { columns: 3; } }
+  @media (min-width: 1100px) { .grid { columns: 4; } }
+</style>

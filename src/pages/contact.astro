@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../config';
+
+const channels = [
+  { label: 'Messenger', value: 'Nhắn tin trực tiếp', href: SITE.messenger },
+  { label: 'Instagram', value: '@handiomacrame', href: SITE.instagram },
+  { label: 'Facebook', value: 'Handio Macrame', href: SITE.facebook },
+  { label: 'Email', value: SITE.email, href: `mailto:${SITE.email}` },
+];
+---
+<BaseLayout title="Contact" description="Liên hệ HANDIO để hỏi về mẫu hoặc đặt làm riêng.">
+  <section class="container contact">
+    <p class="eyebrow">Contact</p>
+    <h1>Hỏi về mẫu, hoặc đặt làm riêng</h1>
+    <p class="lead">Bạn thích mẫu nào? Cứ nhắn cho Handio nhé.</p>
+    <ul>
+      {channels.map((c) => (
+        <li>
+          <a href={c.href} rel="noopener" data-newtab={!c.href.startsWith('mailto:') || undefined}>
+            <span class="eyebrow">{c.label}</span>
+            <span class="value">{c.value}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>
+<style>
+  .contact { max-width: 52rem; padding-top: 1rem; }
+  h1 { font-size: clamp(1.6rem, 4vw, 2.3rem); margin: 0.2rem 0 0.6rem; }
+  .lead { color: var(--muted); margin: 0 0 2rem; }
+  ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  li { border-bottom: 1px solid var(--line); }
+  a { display: flex; justify-content: space-between; gap: 1rem; padding: 1.2rem 0; }
+  a:hover .value { text-decoration: underline; text-underline-offset: 4px; }
+  .value { color: var(--navy); }
+</style>
