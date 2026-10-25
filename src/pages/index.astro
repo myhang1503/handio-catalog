@@ -37,8 +37,24 @@ const products = await Promise.all(
 </BaseLayout>
 <style>
   .intro { text-align: center; padding-block: 1rem 2.5rem; }
-  .grid { columns: 2; column-gap: clamp(10px, 2vw, 24px); }
-  .item { break-inside: avoid; margin-bottom: clamp(10px, 2vw, 24px); }
-  @media (min-width: 700px) { .grid { columns: 3; } }
-  @media (min-width: 1100px) { .grid { columns: 4; } }
+  .grid {
+    --gap: clamp(10px, 2vw, 24px);
+    --stagger: clamp(1.5rem, 6vw, 4rem);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap);
+    padding-bottom: var(--stagger);
+  }
+  /* offset alternate columns for a staggered rhythm (transform keeps row heights even) */
+  .item:nth-child(2n) { transform: translateY(var(--stagger)); }
+  @media (min-width: 700px) {
+    .grid { grid-template-columns: repeat(3, 1fr); }
+    .item:nth-child(2n) { transform: none; }
+    .item:nth-child(3n + 2) { transform: translateY(var(--stagger)); }
+  }
+  @media (min-width: 1100px) {
+    .grid { grid-template-columns: repeat(4, 1fr); }
+    .item:nth-child(3n + 2) { transform: none; }
+    .item:nth-child(4n + 2), .item:nth-child(4n + 4) { transform: translateY(var(--stagger)); }
+  }
 </style>
