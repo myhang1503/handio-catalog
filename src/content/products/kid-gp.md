@@ -21,7 +21,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Heart Bag là chiếc túi nhỏ hình trái tim đan bằng tay, có dây đeo tết dài với nút thắt để chỉnh độ dài, vừa tay các bé.
-
-## Chăm sóc
-
-Đang cập nhật.

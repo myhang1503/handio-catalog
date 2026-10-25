@@ -19,7 +19,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi xách tay nhỏ macrame màu hồng đào, đan hoàn toàn bằng tay.
-
-## Chăm sóc
-
-Đang cập nhật.

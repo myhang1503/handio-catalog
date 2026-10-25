@@ -15,7 +15,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi tote macrame xanh lá viền trắng, đan hoàn toàn bằng tay.
-
-## Chăm sóc
-
-Đang cập nhật.

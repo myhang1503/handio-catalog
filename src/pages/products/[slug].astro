@@ -35,7 +35,7 @@ const hasOthers = prev && prev.id !== entry.id;
 ---
 <BaseLayout title={name} description={subtitle} image={photos[0].src}>
   <div class="container product">
-    <div class="gallery">
+    <div class={`gallery${photos.length === 1 ? ' single' : ''}`}>
       {photos.map((p, i) => (
         <button type="button" class="shot" data-full={p.full} data-alt={p.alt} aria-label={`Phóng to: ${p.alt}`}>
           <Image
@@ -43,7 +43,7 @@ const hasOthers = prev && prev.id !== entry.id;
             width={W}
             height={Math.round((W * p.height) / p.width)}
             widths={[600, 1200]}
-            sizes="(min-width: 900px) 55vw, 100vw"
+            sizes="(min-width: 900px) 28vw, 50vw"
             alt={p.alt}
             loading={i === 0 ? 'eager' : 'lazy'}
           />
@@ -113,12 +113,15 @@ ${location.origin}${location.pathname}`;
 
 <style>
   .product { display: grid; gap: 2.5rem; padding-top: 1rem; }
+  /* phones: details first, photos below */
+  .info { order: -1; }
   @media (min-width: 900px) {
     .product { grid-template-columns: 1.25fr 1fr; gap: 4rem; align-items: start; }
-    .info { position: sticky; top: 2rem; }
+    .info { order: 0; position: sticky; top: 2rem; }
   }
-  .gallery { display: grid; gap: clamp(10px, 2vw, 24px); }
-  .shot { padding: 0; border: 0; background: #efece5; cursor: zoom-in; display: block; }
+  .gallery { --gap: clamp(8px, 1.5vw, 16px); columns: 2; column-gap: var(--gap); }
+  .gallery.single { columns: 1; }
+  .shot { padding: 0; border: 0; background: #efece5; cursor: zoom-in; display: block; width: 100%; margin-bottom: var(--gap); break-inside: avoid; }
   .shot :global(img) { width: 100%; height: auto; }
   h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: 0.08em; margin: 0.2rem 0 0.4rem; }
   .subtitle { color: var(--muted); margin: 0 0 1.5rem; }

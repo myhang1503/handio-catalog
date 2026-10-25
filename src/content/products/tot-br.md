@@ -14,7 +14,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi tote macrame nâu họa tiết hoa, đan hoàn toàn bằng tay.
-
-## Chăm sóc
-
-Đang cập nhật.

@@ -15,7 +15,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi đeo chéo macrame xanh dương nhạt, đan hoàn toàn bằng tay.
-
-## Chăm sóc
-
-Đang cập nhật.

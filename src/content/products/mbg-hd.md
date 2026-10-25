@@ -13,7 +13,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi macrame xanh dương họa tiết cam, đan hoàn toàn bằng tay.
-
-## Chăm sóc
-
-Đang cập nhật.

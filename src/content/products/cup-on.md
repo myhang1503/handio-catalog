@@ -18,7 +18,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Water Bag là chiếc túi lưới macrame ôm gọn ly hoặc bình nước, với quai tết hai tông nâu be và cam đất, điểm một bông hoa nhỏ đính hạt ngọc trai.
-
-## Chăm sóc
-
-Đang cập nhật.

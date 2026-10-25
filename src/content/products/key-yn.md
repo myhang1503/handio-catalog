@@ -13,7 +13,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Móc khóa chữ cái đan hoa hướng dương, đan hoàn toàn bằng tay.
-
-## Chăm sóc
-
-Đang cập nhật.

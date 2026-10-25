@@ -12,7 +12,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Móc khóa macrame hoa hồng màu kem, đan hoàn toàn bằng tay.
-
-## Chăm sóc
-
-Đang cập nhật.

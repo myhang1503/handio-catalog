@@ -21,7 +21,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Flower Lanyard là sợi dây đeo điện thoại đan tay, nở những bông hoa xanh lá và pastel nhỏ xinh trên nền nâu đất.
-
-## Chăm sóc
-
-Đang cập nhật.

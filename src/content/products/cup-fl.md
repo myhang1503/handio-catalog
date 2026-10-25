@@ -15,7 +15,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi đựng ly macrame hồng với hoa nhỏ, đan hoàn toàn bằng tay.
-
-## Chăm sóc
-
-Đang cập nhật.

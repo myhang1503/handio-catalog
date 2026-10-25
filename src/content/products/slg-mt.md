@@ -17,7 +17,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi macrame xanh mint, dây đeo hoa vàng, đan hoàn toàn bằng tay.
-
-## Chăm sóc
-
-Đang cập nhật.

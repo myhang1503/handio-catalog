@@ -15,7 +15,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi tote macrame kem đính nơ hồng, đan hoàn toàn bằng tay.
-
-## Chăm sóc
-
-Đang cập nhật.

@@ -15,7 +15,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi trái tim đan tay màu san hô, đan hoàn toàn bằng tay.
-
-## Chăm sóc
-
-Đang cập nhật.

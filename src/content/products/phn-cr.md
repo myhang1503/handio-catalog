@@ -15,7 +15,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi đựng điện thoại macrame tua rua màu kem, đan hoàn toàn bằng tay.
-
-## Chăm sóc
-
-Đang cập nhật.

@@ -25,7 +25,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Mini Green là chiếc túi nhỏ đan bằng tay, màu xanh mint dịu mắt, điểm thêm những bông hoa vàng bé xíu trên dây đeo.
-
-## Chăm sóc
-
-Đang cập nhật.

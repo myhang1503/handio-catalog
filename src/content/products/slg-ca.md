@@ -12,7 +12,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi macrame caramel với họa tiết hoa trắng, đan hoàn toàn bằng tay.
-
-## Chăm sóc
-
-Đang cập nhật.

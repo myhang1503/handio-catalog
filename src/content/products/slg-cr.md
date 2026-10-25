@@ -11,7 +11,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi rút macrame màu kem, điểm hạt gỗ, đan hoàn toàn bằng tay.
-
-## Chăm sóc
-
-Đang cập nhật.

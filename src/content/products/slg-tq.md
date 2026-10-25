@@ -13,7 +13,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi macrame xanh ngọc viền tua rua, đan hoàn toàn bằng tay.
-
-## Chăm sóc
-
-Đang cập nhật.

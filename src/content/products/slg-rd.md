@@ -21,7 +21,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi macrame đỏ với tua rua dài, đan hoàn toàn bằng tay.
-
-## Chăm sóc
-
-Đang cập nhật.

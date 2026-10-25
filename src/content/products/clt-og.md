@@ -12,7 +12,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi cầm tay macrame xám và cam, đan hoàn toàn bằng tay.
-
-## Chăm sóc
-
-Đang cập nhật.

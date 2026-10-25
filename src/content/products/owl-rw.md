@@ -12,7 +12,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Chú cú macrame treo tường, đan hoàn toàn bằng tay.
-
-## Chăm sóc
-
-Đang cập nhật.

@@ -18,7 +18,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi đeo chéo macrame nâu họa tiết lá, đan hoàn toàn bằng tay.
-
-## Chăm sóc
-
-Đang cập nhật.

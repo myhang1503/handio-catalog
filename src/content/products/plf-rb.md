@@ -6,7 +6,6 @@ cover: 'plf-rb-01s-cover.jpg'
 images:
   - { file: 'plf-rb-02v-lifestyle.jpg', alt: 'Phone Net Bag khi sử dụng' }
   - { file: 'plf-rb-03v-full.jpg', alt: 'Phone Net Bag nhìn toàn thể' }
-  - { file: 'plf-rb-04v-lifestyle.jpg', alt: 'Phone Net Bag khi sử dụng' }
   - { file: 'plf-rb-05v-full.jpg', alt: 'Phone Net Bag nhìn toàn thể' }
   - { file: 'plf-rb-06s-detail.jpg', alt: 'Phone Net Bag cận cảnh chi tiết' }
   - { file: 'plf-rb-07s-detail.jpg', alt: 'Phone Net Bag cận cảnh chi tiết' }
@@ -54,7 +53,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Phone Net Bag là chiếc túi lưới đan tay đựng điện thoại, tông màu pastel nhẹ nhàng, dây đeo điểm những bông hoa nhỏ, kèm một chiếc túi nhỏ xinh.
-
-## Chăm sóc
-
-Đang cập nhật.

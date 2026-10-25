@@ -12,7 +12,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi macrame kem tua rua, họa tiết xanh, đan hoàn toàn bằng tay.
-
-## Chăm sóc
-
-Đang cập nhật.

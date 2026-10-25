@@ -12,7 +12,3 @@ specs:
   - { label: 'Chất liệu', value: 'Đang cập nhật' }
 ---
 Túi lưới macrame đựng chai nước, đan hoàn toàn bằng tay.
-
-## Chăm sóc
-
-Đang cập nhật.
