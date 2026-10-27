@@ -1,7 +1,7 @@
 ---
 name: 'Blue Orange Bag'
 subtitle: 'Túi macrame xanh dương họa tiết cam'
-order: 22
+order: 25
 cover: 'mbg-hd-01s-lifestyle.jpg'
 images:
   - { file: 'mbg-hd-02s-lifestyle.jpg', alt: 'Blue Orange Bag khi sử dụng' }

@@ -1,7 +1,7 @@
 ---
 name: 'Fringe Phone Bag'
 subtitle: 'Túi đựng điện thoại macrame tua rua màu kem'
-order: 31
+order: 20
 cover: 'phn-cr-01v-cover.jpg'
 images:
   - { file: 'phn-cr-02v-full.jpg', alt: 'Fringe Phone Bag nhìn toàn thể' }

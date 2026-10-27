@@ -1,7 +1,7 @@
 ---
 name: 'Green Tote'
 subtitle: 'Túi tote macrame màu xanh lá'
-order: 6
+order: 15
 cover: 'tpu-gr-01v-cover.jpg'
 images:
   - { file: 'tpu-gr-02v-full.jpg', alt: 'Green Tote nhìn toàn thể' }

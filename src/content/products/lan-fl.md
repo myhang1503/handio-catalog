@@ -1,7 +1,7 @@
 ---
 name: 'Flower Lanyard'
 subtitle: 'Dây đeo điện thoại macrame với những bông hoa nhỏ'
-order: 3
+order: 10
 cover: 'lan-fl-01s-cover.jpg'
 images:
   - { file: 'lan-fl-02s-full.jpg', alt: 'Flower Lanyard nhìn toàn thể' }

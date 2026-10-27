@@ -1,7 +1,7 @@
 ---
 name: 'Turquoise Sling'
 subtitle: 'Túi macrame xanh ngọc viền tua rua'
-order: 15
+order: 24
 cover: 'slg-tq-01s-cover.jpg'
 images:
   - { file: 'slg-tq-02s-full.jpg', alt: 'Turquoise Sling nhìn toàn thể' }

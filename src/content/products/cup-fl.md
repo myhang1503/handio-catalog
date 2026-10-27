@@ -1,7 +1,7 @@
 ---
 name: 'Flower Cup Cover'
 subtitle: 'Túi đựng ly macrame hồng với hoa nhỏ'
-order: 25
+order: 26
 cover: 'cup-fl-01v-lifestyle.jpg'
 images:
   - { file: 'cup-fl-02v-lifestyle.jpg', alt: 'Flower Cup Cover khi sử dụng' }

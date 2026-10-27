@@ -1,7 +1,7 @@
 ---
 name: 'Caramel Sling'
 subtitle: 'Túi macrame caramel với họa tiết hoa trắng'
-order: 10
+order: 18
 cover: 'slg-ca-01s-detail.jpg'
 images:
   - { file: 'slg-ca-02s-lifestyle.jpg', alt: 'Caramel Sling khi sử dụng' }

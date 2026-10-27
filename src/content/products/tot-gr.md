@@ -1,7 +1,7 @@
 ---
 name: 'Striped Green Tote'
 subtitle: 'Túi tote macrame xanh lá viền trắng'
-order: 18
+order: 22
 cover: 'tot-gr-01s-full.jpg'
 images:
   - { file: 'tot-gr-02s-full.jpg', alt: 'Striped Green Tote nhìn toàn thể' }

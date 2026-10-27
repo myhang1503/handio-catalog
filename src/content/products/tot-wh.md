@@ -1,7 +1,7 @@
 ---
 name: 'White Tote'
 subtitle: 'Túi tote macrame trắng kem'
-order: 19
+order: 17
 cover: 'tot-wh-01s-packaging.jpg'
 images:
   - { file: 'tot-wh-02v-lifestyle.jpg', alt: 'White Tote khi sử dụng' }

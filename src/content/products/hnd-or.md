@@ -1,7 +1,7 @@
 ---
 name: 'Orange Handbag'
 subtitle: 'Túi xách tay nhỏ macrame màu cam đất'
-order: 20
+order: 21
 cover: 'hnd-or-01s-full.jpg'
 images:
   - { file: 'hnd-or-02s-detail.jpg', alt: 'Orange Handbag cận cảnh chi tiết' }

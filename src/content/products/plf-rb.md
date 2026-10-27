@@ -1,7 +1,7 @@
 ---
 name: 'Phone Net Bag'
 subtitle: 'Túi lưới đựng điện thoại tông pastel, dây đeo hoa'
-order: 4
+order: 11
 cover: 'plf-rb-01s-cover.jpg'
 images:
   - { file: 'plf-rb-02v-lifestyle.jpg', alt: 'Phone Net Bag khi sử dụng' }

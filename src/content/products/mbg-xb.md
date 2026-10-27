@@ -1,7 +1,7 @@
 ---
 name: 'Blue Crossbody'
 subtitle: 'Túi đeo chéo macrame xanh dương và cam'
-order: 23
+order: 14
 cover: 'mbg-xb-01s-cover.jpg'
 images:
   - { file: 'mbg-xb-02s-cover.jpg', alt: 'Blue Crossbody' }

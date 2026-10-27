@@ -1,7 +1,7 @@
 ---
 name: 'Owl'
 subtitle: 'Chú cú macrame treo tường'
-order: 30
+order: 31
 cover: 'owl-rw-01v-cover.jpg'
 images:
   - { file: 'owl-rw-02s-lifestyle.jpg', alt: 'Owl khi sử dụng' }

@@ -1,7 +1,7 @@
 ---
 name: 'Brown Tote'
 subtitle: 'Túi tote macrame nâu họa tiết hoa'
-order: 16
+order: 23
 cover: 'tot-br-01s-cover.jpg'
 images:
   - { file: 'tot-br-02s-full.jpg', alt: 'Brown Tote nhìn toàn thể' }

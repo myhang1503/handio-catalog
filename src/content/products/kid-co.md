@@ -1,7 +1,7 @@
 ---
 name: 'Coral Heart Bag'
 subtitle: 'Túi trái tim đan tay màu san hô'
-order: 7
+order: 16
 cover: 'kid-co-01s-cover.jpg'
 images:
   - { file: 'kid-co-02s-lifestyle.jpg', alt: 'Coral Heart Bag khi sử dụng' }

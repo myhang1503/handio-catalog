@@ -1,7 +1,7 @@
 ---
 name: 'Water Bag'
 subtitle: 'Túi đựng ly, bình nước bằng macrame'
-order: 2
+order: 8
 cover: 'cup-on-01v-cover.jpg'
 images:
   - { file: 'cup-on-02v-full.jpg', alt: 'Water Bag nhìn toàn thể' }

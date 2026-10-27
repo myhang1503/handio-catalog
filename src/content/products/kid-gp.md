@@ -1,7 +1,7 @@
 ---
 name: 'Heart Bag'
 subtitle: 'Túi đeo chéo hình trái tim cho bé'
-order: 5
+order: 12
 cover: 'kid-gp-01v-cover.jpg'
 images:
   - { file: 'kid-gp-02s-full.jpg', alt: 'Heart Bag nhìn toàn thể' }

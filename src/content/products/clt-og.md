@@ -1,7 +1,7 @@
 ---
 name: 'Grey Orange Clutch'
 subtitle: 'Túi cầm tay macrame xám và cam'
-order: 24
+order: 4
 cover: 'clt-og-01v-cover.jpg'
 images:
   - { file: 'clt-og-02v-full.jpg', alt: 'Grey Orange Clutch nhìn toàn thể' }

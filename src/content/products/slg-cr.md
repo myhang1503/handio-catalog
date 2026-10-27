@@ -1,7 +1,7 @@
 ---
 name: 'Cream Sling'
 subtitle: 'Túi rút macrame màu kem, điểm hạt gỗ'
-order: 12
+order: 13
 cover: 'slg-cr-01s-full.jpg'
 images: []
 specs:

@@ -1,7 +1,7 @@
 ---
 name: 'Red Fringe Sling'
 subtitle: 'Túi macrame đỏ với tua rua dài'
-order: 14
+order: 6
 cover: 'slg-rd-01s-cover.jpg'
 images:
   - { file: 'slg-rd-02s-full.jpg', alt: 'Red Fringe Sling nhìn toàn thể' }

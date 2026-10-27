@@ -1,7 +1,7 @@
 ---
 name: 'Rose Keychain'
 subtitle: 'Móc khóa macrame hoa hồng và lá'
-order: 27
+order: 28
 cover: 'key-rs-01s-cover.jpg'
 images:
   - { file: 'key-rs-02s-full.jpg', alt: 'Rose Keychain nhìn toàn thể' }

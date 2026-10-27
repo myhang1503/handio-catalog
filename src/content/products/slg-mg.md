@@ -1,7 +1,7 @@
 ---
 name: 'Mini Green'
 subtitle: 'Túi macrame xanh mint với hoa vàng nhỏ'
-order: 1
+order: 9
 cover: 'slg-mg-01s-cover.jpg'
 images:
   - { file: 'slg-mg-02s-full.jpg', alt: 'Mini Green nhìn toàn thể' }

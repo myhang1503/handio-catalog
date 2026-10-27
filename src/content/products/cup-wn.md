@@ -1,7 +1,7 @@
 ---
 name: 'Net Bottle Holder'
 subtitle: 'Túi lưới macrame đựng chai nước'
-order: 26
+order: 27
 cover: 'cup-wn-01v-cover.jpg'
 images:
   - { file: 'cup-wn-02v-full.jpg', alt: 'Net Bottle Holder nhìn toàn thể' }

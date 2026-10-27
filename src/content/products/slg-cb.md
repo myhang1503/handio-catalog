@@ -1,7 +1,7 @@
 ---
 name: 'Cream Fringe Sling'
 subtitle: 'Túi macrame kem tua rua, họa tiết xanh'
-order: 11
+order: 19
 cover: 'slg-cb-01v-full.jpg'
 images:
   - { file: 'slg-cb-02v-full.jpg', alt: 'Cream Fringe Sling nhìn toàn thể' }

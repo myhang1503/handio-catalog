@@ -1,11 +1,11 @@
 ---
 name: 'Brown Sling'
 subtitle: 'Túi đeo chéo macrame nâu họa tiết lá'
-order: 9
-cover: 'slg-br-01s-cover.jpg'
+order: 7
+cover: 'slg-br-02s-full.jpg'
 images:
-  - { file: 'slg-br-02s-full.jpg', alt: 'Brown Sling nhìn toàn thể' }
   - { file: 'slg-br-03s-full.jpg', alt: 'Brown Sling nhìn toàn thể' }
+  - { file: 'slg-br-01s-cover.jpg', alt: 'Brown Sling nhìn toàn thể' }
   - { file: 'slg-br-04s-detail.jpg', alt: 'Brown Sling cận cảnh chi tiết' }
   - { file: 'slg-br-05s-detail.jpg', alt: 'Brown Sling cận cảnh chi tiết' }
   - { file: 'slg-br-06s-full.jpg', alt: 'Brown Sling nhìn toàn thể' }
