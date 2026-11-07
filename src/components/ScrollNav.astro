@@ -1,5 +1,4 @@
 ---
-// Floating "to top" / "to bottom" buttons. Each one hides itself when it has nowhere to go.
 ---
 <div class="scroll-nav" role="group" aria-label="Cuộn trang">
   <button type="button" id="to-top" aria-label="Lên đầu trang" hidden>
@@ -12,7 +11,7 @@
 <script>
   const toTop = document.querySelector<HTMLButtonElement>('#to-top')!;
   const toBottom = document.querySelector<HTMLButtonElement>('#to-bottom')!;
-  const THRESHOLD = 200; // px from either end before a button appears
+  const THRESHOLD = 200;
 
   const update = () => {
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
@@ -26,7 +25,7 @@
   );
   addEventListener('scroll', update, { passive: true });
   addEventListener('resize', update);
-  addEventListener('load', update); // page height settles after images load
+  addEventListener('load', update);
   update();
 </script>
 <style>

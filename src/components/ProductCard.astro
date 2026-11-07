@@ -11,7 +11,7 @@ interface Props {
 }
 const { href, name, subtitle, cover, hover } = Astro.props;
 const W = 900;
-const SIZES = '(min-width: 1100px) 25vw, (min-width: 700px) 33vw, 50vw'; // matches the 4/3/2-column grid
+const SIZES = '(min-width: 1100px) 25vw, (min-width: 700px) 33vw, 50vw';
 const h = (p: Photo) => Math.round((W * p.height) / p.width);
 ---
 <a class="card" href={href}>
@@ -25,7 +25,6 @@ const h = (p: Photo) => Math.round((W * p.height) / p.width);
     alt={`${name} — ${subtitle}`}
     loading="lazy"
   />
-  {/* second photo, cross-fades in on hover */}
   {hover && (
     <Image
       class="alt"
@@ -74,7 +73,6 @@ const h = (p: Photo) => Math.round((W * p.height) / p.width);
   @media (hover: hover) {
     .card:hover .alt, .card:hover .label { opacity: 1; }
   }
-  /* touch screens have no hover: keep the name always visible */
   @media (hover: none) {
     .label { opacity: 1; }
   }

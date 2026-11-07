@@ -45,7 +45,6 @@ const products = await Promise.all(
     gap: var(--gap);
     padding-bottom: var(--stagger);
   }
-  /* offset alternate columns for a staggered rhythm (transform keeps row heights even) */
   .item:nth-child(2n) { transform: translateY(var(--stagger)); }
   @media (min-width: 700px) {
     .grid { grid-template-columns: repeat(3, 1fr); }

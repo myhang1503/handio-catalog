@@ -45,10 +45,8 @@ h1, h2, h3 {
   padding-inline: var(--gutter);
 }
 
-/* single-column reading pages (about, contact, journal) */
 .container.narrow { max-width: 52rem; padding-top: 1rem; }
 
-/* long-form text; also styles rendered markdown */
 .prose { max-width: 38rem; }
 .prose h2 { font-size: 1.1rem; letter-spacing: 0.2em; text-transform: uppercase; margin: 2.2rem 0 0.6rem; }
 .prose p { margin: 0 0 1rem; }

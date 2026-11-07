@@ -4,9 +4,7 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { remotePhoto } from '../../lib/images';
 
-// newest first
 const posts = (await getCollection('journal')).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
-// attach each post's cover with its measured size
 const items = await Promise.all(
   posts.map(async (p) => ({ ...p, photo: p.data.cover ? await remotePhoto(p.data.cover) : undefined })),
 );
