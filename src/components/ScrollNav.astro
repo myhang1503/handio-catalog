@@ -1,0 +1,59 @@
+---
+// Floating "to top" / "to bottom" buttons. Each one hides itself when it has nowhere to go.
+---
+<div class="scroll-nav" role="group" aria-label="Cuộn trang">
+  <button type="button" id="to-top" aria-label="Lên đầu trang" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+  </button>
+  <button type="button" id="to-bottom" aria-label="Xuống cuối trang" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+  </button>
+</div>
+<script>
+  const toTop = document.querySelector<HTMLButtonElement>('#to-top')!;
+  const toBottom = document.querySelector<HTMLButtonElement>('#to-bottom')!;
+  const THRESHOLD = 200; // px from either end before a button appears
+
+  const update = () => {
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    toTop.hidden = window.scrollY < THRESHOLD;
+    toBottom.hidden = maxScroll < THRESHOLD || window.scrollY > maxScroll - THRESHOLD;
+  };
+
+  toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  toBottom.addEventListener('click', () =>
+    window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' }),
+  );
+  addEventListener('scroll', update, { passive: true });
+  addEventListener('resize', update);
+  addEventListener('load', update); // page height settles after images load
+  update();
+</script>
+<style>
+  .scroll-nav {
+    position: fixed;
+    right: clamp(12px, 2vw, 24px);
+    bottom: clamp(12px, 2vw, 24px);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  button {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    background: var(--navy);
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+  }
+  button:hover { opacity: 1; }
+  button[hidden] { display: none; } /* `display: grid` above would otherwise override [hidden] */
+  svg { width: 20px; height: 20px; }
+</style>

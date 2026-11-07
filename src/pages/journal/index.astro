@@ -1,0 +1,51 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { remotePhoto } from '../../lib/images';
+
+// newest first
+const posts = (await getCollection('journal')).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+// attach each post's cover with its measured size
+const items = await Promise.all(
+  posts.map(async (p) => ({ ...p, photo: p.data.cover ? await remotePhoto(p.data.cover) : undefined })),
+);
+---
+<BaseLayout
+  title="Journal"
+  description="Stories, materials, inspiration and the little details behind everything we create."
+  image={items[0]?.photo?.src}
+>
+  <section class="container narrow">
+    <p class="eyebrow">Journal</p>
+    <h1>Stories behind the craft.</h1>
+    <p class="intro">Stories, materials, inspiration and the little details behind everything we create.</p>
+
+    <ul>
+      {items.map((p) => (
+        <li>
+          <a href={`/journal/${p.id}/`}>
+            {p.photo && <Image src={p.photo.src} width={240} height={240} alt="" class="thumb" />}
+            <div>
+              {p.data.category && <p class="meta">{p.data.category}</p>}
+              <h2>{p.data.title}</h2>
+              {p.data.summary && <p class="summary">{p.data.summary}</p>}
+            </div>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>
+<style>
+  h1 { font-size: clamp(1.5rem, 4vw, 2rem); margin: 0.2rem 0 0.5rem; }
+  .intro { color: var(--muted); margin: 0 0 1.8rem; font-size: 0.9rem; }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li + li { margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid var(--line); }
+  li a { display: flex; gap: 1rem; align-items: center; }
+  .meta { margin: 0 0 0.2rem; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  h2 { margin: 0 0 0.2rem; font-size: 1rem; font-weight: 500; color: var(--ink); }
+  li a:hover h2 { text-decoration: underline; text-underline-offset: 3px; }
+  .summary { margin: 0; color: var(--muted); font-size: 0.85rem; }
+  .thumb { width: 84px; height: 84px; object-fit: cover; border-radius: 10px; flex: none; }
+</style>

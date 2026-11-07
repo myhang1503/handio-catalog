@@ -1,0 +1,32 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// One page per journal post.
+export async function getStaticPaths() {
+  const posts = await getCollection('journal');
+  return posts.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { title, date, summary, cover } = entry.data;
+const { Content } = await render(entry);
+const fmt = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+---
+<BaseLayout title={title} description={summary ?? title} image={cover}>
+  <article class="container narrow">
+    <p class="eyebrow"><a href="/journal/">Journal</a></p>
+    <h1>{title}</h1>
+    <time datetime={date.toISOString()}>{fmt.format(date)}</time>
+    <div class="prose"><Content /></div>
+  </article>
+</BaseLayout>
+<style>
+  .eyebrow a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: 0.04em; margin: 0.2rem 0 0.6rem; }
+  /* posts are stacked images: render them edge to edge with no gaps */
+  .prose { max-width: 44rem; }
+  .prose :global(p:has(> img)) { margin: 0; }
+  .prose :global(img) { display: block; width: 100%; height: auto; }
+  time { display: block; margin-bottom: 2rem; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+</style>

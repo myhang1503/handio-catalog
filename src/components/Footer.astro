@@ -1,33 +1,58 @@
 ---
 import { Image } from 'astro:assets';
 import { SITE, LOGO } from '../config';
+
+// same pages as the header, plus Journal
+const explore = [
+  { href: '/', label: 'Collection' },
+  { href: '/about/', label: 'About' },
+  { href: '/journal/', label: 'Journal' },
+  { href: '/contact/', label: 'Contact' },
+];
 ---
 <footer>
-  <Image src={LOGO} alt="HANDIO" width={320} height={256} class="logo" />
-  <p class="tagline">{SITE.tagline}</p>
-  <nav aria-label="Mạng xã hội">
-    <a href={SITE.instagram} rel="noopener" data-newtab>Instagram</a>
-    <a href={SITE.facebook} rel="noopener" data-newtab>Facebook</a>
-    <a href={`mailto:${SITE.email}`}>Email</a>
+  <div class="brand">
+    <Image src={LOGO} alt="HANDIO" width={320} height={256} class="logo" />
+    <p class="tagline">{SITE.tagline}</p>
+  </div>
+  <div class="rule"></div>
+  <nav class="links" aria-label="Footer">
+    {explore.map((l) => <a href={l.href}>{l.label}</a>)}
   </nav>
-  <p class="copy">© {new Date().getFullYear()} HANDIO</p>
+  <div class="social">
+    <a href={SITE.instagram} rel="noopener" data-newtab aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg>
+    </a>
+    <a href={SITE.facebook} rel="noopener" data-newtab aria-label="Facebook">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg>
+    </a>
+    <a href={`mailto:${SITE.email}`} aria-label="Email">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+    </a>
+  </div>
+  <p class="copy">© {new Date().getFullYear()} HANDIO. All rights reserved.</p>
 </footer>
 <style>
   footer {
     margin-top: 6rem;
-    padding: 3rem var(--gutter) 2rem;
+    padding: 2.4rem var(--gutter) 1.8rem;
     background: var(--navy);
     color: #dfe7ee;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.8rem;
   }
-  .logo { width: 160px; height: auto; }
-  .tagline { margin: 0; letter-spacing: 0.25em; text-transform: uppercase; font-size: 0.75rem; }
-  nav { display: flex; gap: 1.6rem; margin-top: 0.6rem; }
-  nav a { color: #fff; font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; }
-  nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
-  .copy { margin: 1rem 0 0; font-size: 0.7rem; opacity: 0.6; }
+  .logo { width: 140px; height: auto; display: block; margin: 0 auto; }
+  .tagline { margin: 0.6rem 0 0; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em; }
+  .rule { width: 100%; height: 1px; background: rgba(255, 255, 255, 0.25); margin: 1.6rem 0 1.2rem; }
+  a { color: #fff; }
+  .links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem 1.2rem; }
+  .links a { text-transform: uppercase; font-size: 0.85rem; }
+  .links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .social { display: flex; gap: 1.1rem; margin-top: 1rem; }
+  .social a { display: inline-flex; opacity: 0.9; }
+  .social a:hover { opacity: 1; }
+  .social svg { width: 18px; height: 18px; }
+  .copy { margin: 1.4rem 0 0; font-size: 0.85rem; }
 </style>

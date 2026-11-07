@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ScrollNav from '../components/ScrollNav.astro';
 import { SITE } from '../config';
 import '../styles/global.css';
 
@@ -47,8 +48,9 @@ const pageTitle = title ? `${title} · ${SITE.name}` : `${SITE.name} — Macrame
       <slot />
     </main>
     <Footer />
+    <ScrollNav />
     <script>
-      // desktop (mouse): open in a new tab; touch devices: same tab so the OS can hand off to the app
+      // Links marked data-newtab: new tab on desktop (mouse); same tab on touch devices so the OS can hand off to the app
       if (matchMedia('(hover: hover)').matches) {
         document.querySelectorAll<HTMLAnchorElement>('a[data-newtab]').forEach((a) => (a.target = '_blank'));
       }

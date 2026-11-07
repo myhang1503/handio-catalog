@@ -5,6 +5,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { productPhoto } from '../../lib/images';
 import { SITE } from '../../config';
 
+// One page per product, in catalog order; prev/next wrap around for the pager.
 export async function getStaticPaths() {
   const entries = (await getCollection('products')).sort((a, b) => a.data.order - b.data.order);
   return entries.map((entry, i) => ({
@@ -21,6 +22,7 @@ const { entry, prev, next } = Astro.props;
 const { name, subtitle, cover, images, specs } = entry.data;
 const { Content } = await render(entry);
 
+// cover first, then the rest of the gallery
 const files = [{ file: cover, alt: `${name} — ${subtitle}` }, ...images];
 const photos = await Promise.all(
   files.map(async (f) => {
@@ -29,7 +31,8 @@ const photos = await Promise.all(
     return { ...photo, alt: f.alt, full: big.src };
   }),
 );
-const W = 1200;
+const W = 1200; // display width; the lightbox loads a 1800px version
+// message pre-filled in Messenger (the script below appends the page URL)
 const askText = `Xin chào Handio, mình muốn hỏi giá mẫu ${name} ạ.`;
 const jsonLd = {
   '@context': 'https://schema.org',
