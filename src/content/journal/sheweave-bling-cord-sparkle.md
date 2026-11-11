@@ -6,7 +6,7 @@ summary: "Meet our 3mm Sheweave bling cord, a soft cotton cord woven with a shim
 cover: "https://cdn.handiomacrame.com/journal/sheweave-bling-cover.png"
 ---
 
-![Sheweave bling cord 01](https://cdn.handiomacrame.com/journal/sheweave-bling-01.png)
+![Sheweave bling cord 01](https://cdn.handiomacrame.com/journal/sheweave-bling-cover.png)
 
 ![Sheweave bling cord 02](https://cdn.handiomacrame.com/journal/sheweave-bling-02.png)
 
